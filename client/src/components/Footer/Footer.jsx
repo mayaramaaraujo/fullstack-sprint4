@@ -1,4 +1,32 @@
 import React from 'react'
+import GooglePlay from '../../assets/google-play.webp';
+import AppStore from '../../assets/app-store.webp';
+import IconeAtendimento from '../../assets/ico-attendance.svg';
+import IconeFaq from '../../assets/ico-faq.svg';
+import IconeFaturaExtrato from '../../assets/ico-invoice-and-statement.svg';
+import IconeTrabalhe from '../../assets/ico-work-with-us.svg';
+import Cartao1 from '../../assets/ico-cartao-rchlo1.webp';
+import Cartao2 from '../../assets/ico-cartao-rchlo2.webp';
+import Cartao3 from '../../assets/ico-cartao-rchlo3.webp';
+import Cartao4 from '../../assets/ico-cartao-visa.png';
+import Cartao5 from '../../assets/ico-cartao-master.webp';
+import Cartao6 from '../../assets/ico-cartao-amex.webp';
+import Cartao7 from '../../assets/ico-cartao-diners.png';
+import Cartao8 from '../../assets/ico-cartao-elo.png';
+import Cartao9 from '../../assets/ico-boleto.webp';
+import Cartao10 from '../../assets/ico-paypal.png';
+
+import Facebook from '../../assets/ico-facebook.svg';
+import Instagram from '../../assets/ico-instagram.svg';
+import Pinterest from '../../assets/ico-pinterest.svg';
+import Twitter from '../../assets/ico-twitter.svg';
+import Youtube from '../../assets/ico-youtube.svg';
+import Linkedin from '../../assets/ico-linkedin.svg';
+import Acessibilidade from '../../assets/ico-a11y.webp';
+import Copy from '../../assets/ra1000.webp';
+
+
+
 
 function Footer() {
   return (
@@ -15,10 +43,10 @@ function Footer() {
           <p class="contact__msg-app">Baixe nosso App</p>
           <div class="apps">
             <a href="/#">
-              <img class="apps__img" src="assets/google-play.webp" alt="Google Play" />
+              <img class="apps__img" src={GooglePlay} alt="Google Play" />
             </a>
             <a href="/#">
-              <img class="apps__img" src="assets/app-store.webp" alt="App Store" />
+              <img class="apps__img" src={AppStore} alt="App Store" />
             </a>
           </div>
         </div>
@@ -28,21 +56,21 @@ function Footer() {
           <div class="links__contacts">
             <div class="col">
               <a href="" class="contact-icon">
-                <img class="contact-icon__img" src="assets/ico-attendance.svg" alt="Atendimento" />
+                <img class="contact-icon__img" src={IconeAtendimento} alt="Atendimento" />
                 <p class="contact-icon__text">Atendimento</p>
               </a>
               <a href="" class="contact-icon">
-                <img class="contact-icon__img" src="assets/ico-faq.svg" alt="Perguntas Frequentes" />
+                <img class="contact-icon__img" src={IconeFaq} alt="Perguntas Frequentes" />
                 <p class="contact-icon__text">Perguntas Frequentes</p>
               </a>
             </div>
             <div class="col">
               <a href="" class="contact-icon">
-                <img class="contact-icon__img" src="assets/ico-invoice-and-statement.svg" alt="Fatura e Extrato" />
+                <img class="contact-icon__img" src={IconeFaturaExtrato} alt="Fatura e Extrato" />
                 <p class="contact-icon__text">Fatura e Extrato</p>
               </a>
               <a href="" class="contact-icon">
-                <img class="contact-icon__img" src="assets/ico-work-with-us.svg" alt="Trabalhe Conosco" />
+                <img class="contact-icon__img" src={IconeTrabalhe} alt="Trabalhe Conosco" />
                 <p class="contact-icon__text">Trabalhe Conosco</p>
               </a>
             </div>
@@ -173,65 +201,65 @@ function Footer() {
         <div class="footer__container payment">
           <div class="payment__alternatives">
             <h3 class="payment__title">Formas de Pagamento</h3>
-            <img class="payment__img" src="assets/ico-cartao-rchlo1.webp" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-rchlo2.webp" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-rchlo3.webp" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-visa.png" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-master.webp" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-amex.webp" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-diners.png" alt="" />
-            <img class="payment__img" src="assets/ico-cartao-elo.png" alt="" />
-            <img class="payment__img" src="assets/ico-boleto.webp" alt="" />
-            <img class="payment__img" src="assets/ico-paypal.png" alt="" />
+            <img class="payment__img" src={Cartao1} alt="" />
+            <img class="payment__img" src={Cartao2} alt="" />
+            <img class="payment__img" src={Cartao3} alt="" />
+            <img class="payment__img" src={Cartao4} alt="" />
+            <img class="payment__img" src={Cartao5} alt="" />
+            <img class="payment__img" src={Cartao6} alt="" />
+            <img class="payment__img" src={Cartao7} alt="" />
+            <img class="payment__img" src={Cartao8} alt="" />
+            <img class="payment__img" src={Cartao9} alt="" />
+            <img class="payment__img" src={Cartao10} alt="" />
           </div>
           <div class="payment__social">
             <h3 class="payment__title">Siga a Riachuelo</h3>
             <div class="social__icons">
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-facebook.svg" alt="" />
+                  <img class="icon__img" src={Facebook} alt="" />
                 </a>
               </div>
 
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-instagram.svg" alt="" />
+                  <img class="icon__img" src={Instagram} alt="" />
                 </a>
                 <p class="icon__text">RCHLO</p>
               </div>
 
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-instagram.svg" alt="" />
+                  <img class="icon__img" src={Instagram} alt="" />
                 </a>
                 <p class="icon__text">CASA RCHLO</p>
               </div>
 
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-pinterest.svg" alt="" />
+                  <img class="icon__img" src={Pinterest} alt="" />
                 </a>
               </div>
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-twitter.svg" alt="" />
+                  <img class="icon__img" src={Twitter} alt="" />
                 </a>
               </div>
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-youtube.svg" alt="" />
+                  <img class="icon__img" src={Youtube} alt="" />
                 </a>
               </div>
               <div class="social__icon icon">
                 <a href="">
-                  <img class="icon__img" src="assets/ico-linkedin.svg" alt="" />
+                  <img class="icon__img" src={Linkedin} alt="" />
                 </a>
               </div>
             </div>
           </div>
           <div class="payment__accessibility">
             <h3 class="payment__title">Acessibilidade</h3>
-            <img src="assets/ico-a11y.webp" alt="" />
+            <img src={Acessibilidade} alt="" />
           </div>
         </div>
       </section>
@@ -265,7 +293,7 @@ function Footer() {
             </p>
           </div>
           <div class="copyright__stamp">
-            <img src="assets/ra1000.webp" alt="" />
+            <img src={Copy} alt="" />
           </div>
         </div>
       </section>
