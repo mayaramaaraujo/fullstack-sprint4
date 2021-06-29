@@ -21,7 +21,7 @@ function App() {
         <Message/>
       </MessageContext.Provider>
       <CategoriesContext.Provider value={{categories: categories, isLoaded: isLoaded}}>
-        <Header />
+        <Header /> 
       </CategoriesContext.Provider>
     </>
   );
