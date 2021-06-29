@@ -4,6 +4,8 @@ const getCategories = async (setIsLoaded, setCategories) => {
   if (response.all) {
     setCategories(response.all)
     setIsLoaded(false)
+  } else {
+    setIsLoaded(true)
   }
 }
 
