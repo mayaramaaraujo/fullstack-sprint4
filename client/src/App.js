@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/reset.css";
+import "./css/styles.css"
+import React, {useState, useEffect} from 'react';
+import Header from './components/Header/Header'
+import Message from './components/Message/Message';
+import MessageContext from './contexts/MessageContext';
+import CategoriesContext from './contexts/CategoriesContext';
+import getCategories from './services/CategoriesService';
 
 function App() {
+  const [categories, setCategories] = useState({});
+  const [isLoaded, setIsLoaded] = useState(true);
+
+  useEffect(() => {
+    getCategories(setIsLoaded, setCategories);
+  }, [isLoaded])
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <MessageContext.Provider value={{showMessage: isLoaded, message: "Não foi possível carregar as categorias"}}>
+        <Message/>
+      </MessageContext.Provider>
+      <CategoriesContext.Provider value={{categories: categories, isLoaded: isLoaded}}>
+        <Header />
+      </CategoriesContext.Provider>
+    </>
   );
 }
 
