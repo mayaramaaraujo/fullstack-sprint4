@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
-import CategoriesContext from '../../contexts/CategoriesContext';
-
+import CategoriesContext from '../../../../contexts/CategoriesContext';
 function MenuItem() {
   const categoriesContext = useContext(CategoriesContext);
 

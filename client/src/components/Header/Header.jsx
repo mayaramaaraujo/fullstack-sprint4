@@ -5,9 +5,10 @@ import LogoMobile from "../../assets/rchlo.svg";
 import LogoDesktop from "../../assets/riachuelo.svg";
 import SearchIcon from "../../assets/search.svg";
 
-import Menu from '../Menu/Menu'
+import Menu from './Menu/Menu'
 
 function Header() {
+
   return (
     <header className="header">
       <div className="header__container">
