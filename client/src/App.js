@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 // Components
 import Message from './components/Message';
 import Header from './components/Header/Header';
+import Footer from './components/Footer'
 
 // Pages
 import ProductsPage from './pages/ProductsPage/ProductsPage';
@@ -32,6 +33,7 @@ function App() {
         </CategoriesContext.Provider>
         <ProductsPage />
       </MessageContext.Provider>
+      <Footer />
     </LoadingContext.Provider>
   );
 }
