@@ -452,4 +452,10 @@ html input {
   margin: 0 auto;
 }
 
+.circular-progress {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 /*# sourceMappingURL=styles.css.map */

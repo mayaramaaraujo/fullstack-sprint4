@@ -2,15 +2,34 @@ import React, { useState } from 'react';
 
 // Components
 import Message from './components/Message';
+import Header from './components/Header/Header';
+
+// Contexts
 import MessageContext from './contexts/MessageContext';
+import CategoriesContext from './contexts/CategoriesContext'
+
+// styles
+import "./css/reset.css"
+import "./css/styles.css"
+
+// services
+import CategoriesService from './services/CategoriesService';
+import LoadingContext from './contexts/LoadingContext';
 
 function App() {
-  const [errorMessage, setErrorMessage] = useState({isOpen: false, message: ""})
+  const [errorMessage, setErrorMessage] = useState({ isOpen: false, message: "" });
+  const [categories, setCategories] = useState();
+  const [isLoading, setIsLoading] = useState(false)
 
   return (
-    <MessageContext.Provider value={{isOpen: errorMessage.isOpen, errorMessage: errorMessage.message, setErrorMessage: setErrorMessage}}>
-      <Message />
-    </MessageContext.Provider>
+    <LoadingContext.Provider value={{isLoading: isLoading, setIsLoading: setIsLoading}}>
+      <MessageContext.Provider value={{ isOpen: errorMessage.isOpen, errorMessage: errorMessage.message, setErrorMessage: setErrorMessage }}>
+        <Message />
+        <CategoriesContext.Provider value={{ categories: categories, setCategories: setCategories }}>
+          <Header />
+        </CategoriesContext.Provider>
+      </MessageContext.Provider>
+    </LoadingContext.Provider>
   );
 }
 
