@@ -4,6 +4,9 @@ import React, { useState } from 'react';
 import Message from './components/Message';
 import Header from './components/Header/Header';
 
+// Pages
+import ProductsPage from './pages/ProductsPage/ProductsPage';
+
 // Contexts
 import MessageContext from './contexts/MessageContext';
 import CategoriesContext from './contexts/CategoriesContext'
@@ -13,7 +16,6 @@ import "./css/reset.css"
 import "./css/styles.css"
 
 // services
-import CategoriesService from './services/CategoriesService';
 import LoadingContext from './contexts/LoadingContext';
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
         <CategoriesContext.Provider value={{ categories: categories, setCategories: setCategories }}>
           <Header />
         </CategoriesContext.Provider>
+        <ProductsPage />
       </MessageContext.Provider>
     </LoadingContext.Provider>
   );

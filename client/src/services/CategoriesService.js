@@ -12,6 +12,7 @@ const CategoriesService = {
       .catch(err => console.log(err))
   },
   getCurrent() {
+    // breadcrumbs
     return fetch("data/categories.json")
       .then(r => {
         if(r.ok) {

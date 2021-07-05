@@ -1,12 +1,16 @@
-import React from 'react';
-import { useContext } from 'react';
-import { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+// contexts
 import CategoriesContext from '../../../contexts/CategoriesContext';
-import MenuItem from './MenuItem.jsx/MenuItem';
-import CategoriesService from '../../../services/CategoriesService';
 import LoadingContext from '../../../contexts/LoadingContext';
 import MessageContext from '../../../contexts/MessageContext';
+
+// components
+import MenuItem from './MenuItem.jsx/MenuItem';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Dialog from '@material-ui/core/Dialog';
+
+// services
+import CategoriesService from '../../../services/CategoriesService';
 
 const Menu = () => {
   const categoriesContext = useContext(CategoriesContext);
@@ -24,9 +28,11 @@ const Menu = () => {
         }, 3000);
       })
       .catch(err => {
-        messageContext.setErrorMessage({ isOpen: true, message: "Não foi possível carregar as categorias" })
+        messageContext.setErrorMessage({
+          isOpen: true,
+          message: "Não foi possível carregar as categorias"
+        })
       })
-
   }
 
   useEffect(() => {
@@ -36,7 +42,15 @@ const Menu = () => {
   return (
     <nav className="header__menu menu">
       <ul className="menu__list">
-        {loadingContext.isLoading ? <div className="circular-progress"><CircularProgress color="inherit" /></div> : <MenuItem />}
+        {loadingContext.isLoading ?
+          <Dialog 
+            open={loadingContext.isLoading} 
+            fullScreen
+            PaperProps={{style: {  backgroundColor: 'transparent', boxShadow: 'none' }}}>
+            <div className="circular-progress">
+              <CircularProgress color="inherit" />
+            </div>
+          </Dialog> : <MenuItem />}
       </ul>
     </nav>
   )
