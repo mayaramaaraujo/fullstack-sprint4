@@ -10,11 +10,19 @@ import MessageContext from '../../contexts/MessageContext';
 const Message = () => {
   const messageContext = useContext(MessageContext);
 
+  const handleClose = () => {
+    messageContext.setErrorMessage({isOpen: false, errorMessage: ""})
+  }
+
   return (
-    <Snackbar open={messageContext.isOpen} anchorOrigin={{horizontal: "right", vertical: "top"}} autoHideDuration={3000}>
-      <Alert severity="error">
+    <Snackbar 
+      open={messageContext.isOpen} 
+      anchorOrigin={{horizontal: "right", vertical: "top"}} 
+      onClose={handleClose}>
+
+      <Alert severity="error" onClose={handleClose}>
         {messageContext.errorMessage}
-      </Alert>
+      </Alert>      
     </Snackbar>
   )
 }

@@ -5,10 +5,10 @@ import Message from './components/Message';
 import MessageContext from './contexts/MessageContext';
 
 function App() {
-  const [errorMessage, setMessageError] = useState({isOpen: true, message: "oi erro"})
+  const [errorMessage, setErrorMessage] = useState({isOpen: false, message: ""})
 
   return (
-    <MessageContext.Provider value={{isOpen: errorMessage.isOpen, errorMessage: errorMessage.message, setMessageError: setMessageError}}>
+    <MessageContext.Provider value={{isOpen: errorMessage.isOpen, errorMessage: errorMessage.message, setErrorMessage: setErrorMessage}}>
       <Message />
     </MessageContext.Provider>
   );
