@@ -1,6 +1,6 @@
 const ProductsService = {
   getProducts() {
-    fetch("data/products.json")
+    return fetch("data/products.json")
       .then(r => {
         if(r.ok) {
           return r.json();
@@ -12,7 +12,7 @@ const ProductsService = {
       .catch(err => console.log(err))
   },
   getFilters() {
-    fetch("data/products.json")
+    return fetch("data/products.json")
       .then(r => {
         if(r.ok) {
           return r.json();

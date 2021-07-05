@@ -1,8 +1,13 @@
 import React, {useState, useEffect, useContext} from 'react'
+
+// contexts
 import MessageContext from '../../../../contexts/MessageContext';
 import LoadingContext from '../../../../contexts/LoadingContext'
+
+// services
 import CategoriesService from '../../../../services/CategoriesService';
 
+// components
 import BreadcrumbsItem from './BreadcrumbsItem/BreadcrumbsItem';
 
 const Breadcrumbs = () => {
