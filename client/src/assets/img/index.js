@@ -11,5 +11,5 @@ import c10 from '../../assets/c10.webp'
 import c11 from '../../assets/c11.webp'
 import c12 from '../../assets/c12.webp'
 
-
-export const imgs = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12];
+const imgs = [c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12];
+export default imgs;

@@ -1,12 +1,18 @@
 import React from 'react'
+import { useContext } from 'react';
 
-// components
-import { imgs } from '../../../../assets/img';
+// assets
+import imgs from '../../../../assets/img';
 
-const Product = (props) => {
+// contexts
+import ProductsContext from '../../../../contexts/ProductsContext';
+
+const Product = () => {
+  const productsContext = useContext(ProductsContext);
+
   return (
     <>
-      {props.products && props.products.map((product, i) => {
+      {productsContext.products && productsContext.products.map((product, i) => {
         return (
           <li className="products__card card">
             <div className="card">
